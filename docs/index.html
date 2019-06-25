@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="md plt-desktop" dir="ltr" mode="md">
+  <head>
+    <meta charset="UTF-8">
+    <title>Button - Basic</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #eee;
+      }
+      main {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+      }
+      iframe {
+        border: 1px solid black;
+        width: 300px;
+        height: 92vh;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <a href="no-prerender.html" target="_blank">Not Prerendered</a>
+        <iframe src="no-prerender.html"></iframe>
+      </section>
+      <section>
+        <a href="prerender-static.html" target="_blank">Prerendered, no JS</a>
+        <iframe src="prerender-static.html"></iframe>
+      </section>
+      <section>
+        <a href="prerender-hydrated.html" target="_blank">Prerendered, then JS Hydrated</a>
+        <iframe src="prerender-hydrated.html"></iframe>
+      </section>
+    </main>
+  </body>
+</html>

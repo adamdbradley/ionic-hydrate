@@ -1,0 +1,771 @@
+<!doctype html>
+<html class="hydrated md plt-desktop plt-tablet" dir="ltr" mode="md">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Button - Basic
+    </title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <style s-id="sc-ion-app">
+      html.plt-mobile ion-app{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}ion-app.force-statusbar-padding{--ion-safe-area-top:20px}
+    </style>
+    <style s-id="sc-ion-header-md">
+      ion-header{display:block;position:relative;-ms-flex-order:-1;order:-1;width:100%;z-index:10}ion-header ion-toolbar:first-child{padding-top:var(--ion-safe-area-top,0)}.header-md:after{left:0;bottom:-5px;background-position:left 0 top -2px;position:absolute;width:100%;height:5px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHBAMAAADzDtBxAAAAD1BMVEUAAAAAAAAAAAAAAAAAAABPDueNAAAABXRSTlMUCS0gBIh/TXEAAAAaSURBVAjXYxCEAgY4UIICBmMogMsgFLtAAQCNSwXZKOdPxgAAAABJRU5ErkJggg==);background-repeat:repeat-x;content:""}:host-context([dir=rtl]) .header-md:after,[dir=rtl] .header-md:after{left:unset;right:unset;right:0;background-position:right 0 top -2px}.header-md[no-border]:after{display:none}
+    </style>
+    <style s-id="sc-ion-content">
+      /*!@:host*/.sc-ion-content-h{--background:var(--ion-background-color,#fff);--color:var(--ion-text-color,#000);--padding-top:0px;--padding-bottom:0px;--padding-start:0px;--padding-end:0px;--keyboard-offset:0px;--offset-top:0px;--offset-bottom:0px;--overflow:auto;display:block;position:relative;-ms-flex:1;flex:1;width:100%;height:100%;margin:0!important;padding:0!important;font-family:var(--ion-font-family,inherit);contain:size style}/*!@:host(.ion-color) .inner-scroll*/.ion-color.sc-ion-content-h .inner-scroll.sc-ion-content{background:var(--ion-color-base);color:var(--ion-color-contrast)}/*!@:host(.outer-content)*/.outer-content.sc-ion-content-h{--background:var(--ion-color-step-50,#f2f2f2)}/*!@.inner-scroll*/.inner-scroll.sc-ion-content{left:0;right:0;top:calc(var(--offset-top) * -1);bottom:calc(var(--offset-bottom) * -1);padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:calc(var(--padding-top) + var(--offset-top));padding-bottom:calc(var(--padding-bottom) + var(--keyboard-offset) + var(--offset-bottom));position:absolute;background:var(--background);color:var(--color);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@.inner-scroll*/.inner-scroll.sc-ion-content{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}/*!@.scroll-x,.scroll-y*/.scroll-x.sc-ion-content, .scroll-y.sc-ion-content{-webkit-overflow-scrolling:touch;will-change:scroll-position;-ms-scroll-chaining:none;overscroll-behavior:contain}/*!@.scroll-y*/.scroll-y.sc-ion-content{-ms-touch-action:pan-y;touch-action:pan-y;overflow-y:var(--overflow)}/*!@.scroll-x*/.scroll-x.sc-ion-content{-ms-touch-action:pan-x;touch-action:pan-x;overflow-x:var(--overflow)}/*!@.scroll-x.scroll-y*/.scroll-x.scroll-y.sc-ion-content{-ms-touch-action:auto;touch-action:auto}/*!@.overscroll:after,.overscroll:before*/.overscroll.sc-ion-content:after, .overscroll.sc-ion-content:before{position:absolute;width:1px;height:1px;content:""}/*!@.overscroll:before*/.overscroll.sc-ion-content:before{bottom:-1px}/*!@.overscroll:after*/.overscroll.sc-ion-content:after{top:-1px}/*!@:host(.content-sizing)*/.content-sizing.sc-ion-content-h{contain:none}/*!@:host(.content-sizing) .inner-scroll*/.content-sizing.sc-ion-content-h .inner-scroll.sc-ion-content{position:relative}
+    </style>
+    <style s-id="sc-ion-toolbar-md">
+      /*!@:host*/.sc-ion-toolbar-md-h{--border-width:0;--border-style:solid;--opacity:1;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;padding-left:var(--ion-safe-area-left);padding-right:var(--ion-safe-area-right);display:block;position:relative;width:100%;color:var(--color);font-family:var(--ion-font-family,inherit);contain:content;z-index:10;-webkit-box-sizing:border-box;box-sizing:border-box}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@:host*/.sc-ion-toolbar-md-h{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--ion-safe-area-left);padding-inline-start:var(--ion-safe-area-left);-webkit-padding-end:var(--ion-safe-area-right);padding-inline-end:var(--ion-safe-area-right)}}/*!@:host(.ion-color)*/.ion-color.sc-ion-toolbar-md-h{color:var(--ion-color-contrast)}/*!@:host(.ion-color) .toolbar-background*/.ion-color.sc-ion-toolbar-md-h .toolbar-background.sc-ion-toolbar-md{background:var(--ion-color-base)}/*!@.toolbar-container*/.toolbar-container.sc-ion-toolbar-md{padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);display:-ms-flexbox;display:flex;position:relative;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;width:100%;min-height:var(--min-height);contain:content;overflow:hidden;z-index:10;-webkit-box-sizing:border-box;box-sizing:border-box}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@.toolbar-container*/.toolbar-container.sc-ion-toolbar-md{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}/*!@.toolbar-background*/.toolbar-background.sc-ion-toolbar-md{top:0;-webkit-transform:translateZ(0);transform:translateZ(0);border-width:var(--border-width);border-style:var(--border-style);border-color:var(--border-color);background:var(--background);contain:strict;opacity:var(--opacity);z-index:-1;pointer-events:none}/*!@.toolbar-background,::slotted(ion-progress-bar)*/.toolbar-background.sc-ion-toolbar-md, .sc-ion-toolbar-md-s > ion-progress-bar{left:0;right:0;bottom:0;position:absolute}/*!@:host*/.sc-ion-toolbar-md-h{--background:var(--ion-toolbar-background,var(--ion-background-color,#fff));--color:var(--ion-toolbar-color,var(--ion-text-color,#424242));--border-color:var(--ion-toolbar-border-color,var(--ion-border-color,var(--ion-color-step-150,#c1c4cd)));--padding-top:0;--padding-bottom:0;--padding-start:0;--padding-end:0;--min-height:56px}/*!@.toolbar-content*/.toolbar-content.sc-ion-toolbar-md{-ms-flex:1;flex:1;-ms-flex-order:3;order:3;min-width:0;max-width:100%}/*!@::slotted(ion-segment)*/.sc-ion-toolbar-md-s > ion-segment{min-height:var(--min-height)}/*!@::slotted(.buttons-first-slot)*/.sc-ion-toolbar-md-s > .buttons-first-slot{margin-left:4px}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@::slotted(.buttons-first-slot)*/.sc-ion-toolbar-md-s > .buttons-first-slot{margin-left:unset;-webkit-margin-start:4px;margin-inline-start:4px}}/*!@::slotted(.buttons-last-slot)*/.sc-ion-toolbar-md-s > .buttons-last-slot{margin-right:4px}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@::slotted(.buttons-last-slot)*/.sc-ion-toolbar-md-s > .buttons-last-slot{margin-right:unset;-webkit-margin-end:4px;margin-inline-end:4px}}/*!@::slotted([slot=start])*/.sc-ion-toolbar-md-s > [slot=start]{-ms-flex-order:2;order:2}/*!@::slotted([slot=secondary])*/.sc-ion-toolbar-md-s > [slot=secondary]{-ms-flex-order:4;order:4}/*!@::slotted([slot=primary])*/.sc-ion-toolbar-md-s > [slot=primary]{-ms-flex-order:5;order:5;text-align:end}/*!@::slotted([slot=end])*/.sc-ion-toolbar-md-s > [slot=end]{-ms-flex-order:6;order:6;text-align:end}
+    </style>
+    <style s-id="sc-ion-button-md">
+      /*!@:host*/.sc-ion-button-md-h{--overflow:hidden;--ripple-color:currentColor;--border-width:initial;--border-color:initial;--border-style:initial;--color-hover:initial;--box-shadow:none;display:inline-block;width:auto;color:var(--color);font-family:var(--ion-font-family,inherit);text-align:center;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:top;vertical-align:-webkit-baseline-middle;pointer-events:auto;-webkit-font-kerning:none;font-kerning:none}/*!@:host(.button-disabled)*/.button-disabled.sc-ion-button-md-h{--opacity:.5;pointer-events:none}/*!@:host(.button-disabled) .button-native*/.button-disabled.sc-ion-button-md-h .button-native.sc-ion-button-md{cursor:default;pointer-events:none}/*!@:host(.button-solid)*/.button-solid.sc-ion-button-md-h{--background:var(--ion-color-primary,#3880ff);--background-focused:var(--ion-color-primary-shade,#3171e0);--background-hover:var(--ion-color-primary-tint,#4c8dff);--color:var(--ion-color-primary-contrast,#fff);--color-activated:var(--ion-color-primary-contrast,#fff);--color-focused:var(--ion-color-primary-contrast,#fff)}/*!@:host(.button-solid.ion-color) .button-native*/.button-solid.ion-color.sc-ion-button-md-h .button-native.sc-ion-button-md{background:var(--ion-color-base);color:var(--ion-color-contrast)}/*!@:host(.button-solid.ion-color.ion-focused) .button-native*/.button-solid.ion-color.ion-focused.sc-ion-button-md-h .button-native.sc-ion-button-md{background:var(--ion-color-shade)}/*!@:host(.button-outline)*/.button-outline.sc-ion-button-md-h{--border-color:var(--ion-color-primary,#3880ff);--background:transparent;--color:var(--ion-color-primary,#3880ff);--color-focused:var(--ion-color-primary,#3880ff)}/*!@:host(.button-outline.ion-color) .button-native*/.button-outline.ion-color.sc-ion-button-md-h .button-native.sc-ion-button-md{border-color:var(--ion-color-base);background:transparent;color:var(--ion-color-base)}/*!@:host(.button-outline.ion-focused.ion-color) .button-native*/.button-outline.ion-focused.ion-color.sc-ion-button-md-h .button-native.sc-ion-button-md{background:rgba(var(--ion-color-base-rgb),.1);color:var(--ion-color-base)}/*!@:host(.button-clear)*/.button-clear.sc-ion-button-md-h{--border-width:0;--background:transparent;--color:var(--ion-color-primary,#3880ff)}/*!@:host(.button-clear.ion-color) .button-native*/.button-clear.ion-color.sc-ion-button-md-h .button-native.sc-ion-button-md{background:transparent;color:var(--ion-color-base)}/*!@:host(.button-clear.ion-focused.ion-color) .button-native*/.button-clear.ion-focused.ion-color.sc-ion-button-md-h .button-native.sc-ion-button-md{background:rgba(var(--ion-color-base-rgb),.1);color:var(--ion-color-base)}/*!@:host(.button-clear.activated.ion-color) .button-native*/.button-clear.activated.ion-color.sc-ion-button-md-h .button-native.sc-ion-button-md{background:transparent}/*!@:host(.button-block)*/.button-block.sc-ion-button-md-h{display:block}/*!@:host(.button-block) .button-native*/.button-block.sc-ion-button-md-h .button-native.sc-ion-button-md{margin-left:0;margin-right:0;display:block;width:100%;clear:both;contain:content}/*!@:host(.button-block) .button-native:after*/.button-block.sc-ion-button-md-h .button-native.sc-ion-button-md:after{clear:both}/*!@:host(.button-full)*/.button-full.sc-ion-button-md-h{display:block}/*!@:host(.button-full) .button-native*/.button-full.sc-ion-button-md-h .button-native.sc-ion-button-md{margin-left:0;margin-right:0;display:block;width:100%;contain:content}/*!@:host(.button-full:not(.button-round)) .button-native*/.button-full.sc-ion-button-md-h:not(.button-round) .button-native.sc-ion-button-md{border-radius:0;border-right-width:0;border-left-width:0}/*!@.button-native*/.button-native.sc-ion-button-md{border-radius:var(--border-radius);-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;text-decoration:inherit;text-overflow:inherit;text-transform:inherit;text-align:inherit;white-space:inherit;color:inherit;display:block;position:relative;width:100%;height:100%;-webkit-transition:var(--transition);transition:var(--transition);border-width:var(--border-width);border-style:var(--border-style);border-color:var(--border-color);outline:none;background:var(--background);line-height:1;-webkit-box-shadow:var(--box-shadow);box-shadow:var(--box-shadow);contain:layout style;cursor:pointer;opacity:var(--opacity);overflow:var(--overflow);z-index:0;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@.button-native*/.button-native.sc-ion-button-md{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}/*!@.button-native::-moz-focus-inner*/.button-native.sc-ion-button-md::-moz-focus-inner{border:0}/*!@.button-inner*/.button-inner.sc-ion-button-md{display:-ms-flexbox;display:flex;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-negative:0;flex-shrink:0;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;height:100%}/*!@::slotted(ion-icon)*/.sc-ion-button-md-s > ion-icon{font-size:1.4em;pointer-events:none}/*!@::slotted(ion-icon[slot=start])*/.sc-ion-button-md-s > ion-icon[slot=start]{margin-left:-.3em;margin-right:.3em;margin-top:0;margin-bottom:0}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@::slotted(ion-icon[slot=start])*/.sc-ion-button-md-s > ion-icon[slot=start]{margin-left:unset;margin-right:unset;-webkit-margin-start:-.3em;margin-inline-start:-.3em;-webkit-margin-end:.3em;margin-inline-end:.3em}}/*!@::slotted(ion-icon[slot=end])*/.sc-ion-button-md-s > ion-icon[slot=end]{margin-left:.3em;margin-right:-.2em;margin-top:0;margin-bottom:0}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@::slotted(ion-icon[slot=end])*/.sc-ion-button-md-s > ion-icon[slot=end]{margin-left:unset;margin-right:unset;-webkit-margin-start:.3em;margin-inline-start:.3em;-webkit-margin-end:-.2em;margin-inline-end:-.2em}}/*!@::slotted(ion-icon[slot=icon-only])*/.sc-ion-button-md-s > ion-icon[slot=icon-only]{font-size:1.8em}/*!@ion-ripple-effect*/ion-ripple-effect.sc-ion-button-md{color:var(--ripple-color)}/*!@:host(.ion-focused) .button-native*/.ion-focused.sc-ion-button-md-h .button-native.sc-ion-button-md{background:var(--background-focused);color:var(--color-focused)}/*!@:host(.activated) .button-native*/.activated.sc-ion-button-md-h .button-native.sc-ion-button-md{background:var(--background-activated);color:var(--color-activated)}@media (any-hover:hover){/*!@:host(:hover) .button-native*/.sc-ion-button-md-h:hover .button-native.sc-ion-button-md{background:var(--background-hover);color:var(--color-hover)}}/*!@:host*/.sc-ion-button-md-h{--border-radius:4px;--padding-top:0;--padding-bottom:0;--padding-start:1.1em;--padding-end:1.1em;--transition:box-shadow 280ms cubic-bezier(.4,0,.2,1),background-color 15ms linear,color 15ms linear;margin-left:2px;margin-right:2px;margin-top:4px;margin-bottom:4px;height:36px;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@:host*/.sc-ion-button-md-h{margin-left:unset;margin-right:unset;-webkit-margin-start:2px;margin-inline-start:2px;-webkit-margin-end:2px;margin-inline-end:2px}}/*!@:host(.button-solid)*/.button-solid.sc-ion-button-md-h{--background-activated:var(--background);--box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12)}/*!@:host(.button-solid.activated)*/.button-solid.activated.sc-ion-button-md-h{--box-shadow:0 5px 5px -3px rgba(0,0,0,0.2),0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12)}/*!@:host(.button-outline)*/.button-outline.sc-ion-button-md-h{--border-width:2px;--border-style:solid;--box-shadow:none;--background-activated:transparent;--background-focused:rgba(var(--ion-color-primary-rgb,56,128,255),0.1);--background-hover:rgba(var(--ion-color-primary-rgb,56,128,255),0.04);--color-activated:var(--ion-color-primary,#3880ff)}/*!@:host(.button-outline.activated.ion-color) .button-native*/.button-outline.activated.ion-color.sc-ion-button-md-h .button-native.sc-ion-button-md{background:transparent}/*!@:host(.button-clear)*/.button-clear.sc-ion-button-md-h{--opacity:1;--background-activated:transparent;--background-focused:rgba(var(--ion-color-primary-rgb,56,128,255),0.1);--background-hover:rgba(var(--ion-color-primary-rgb,56,128,255),0.04);--color-activated:var(--ion-color-primary,#3880ff);--color-focused:var(--ion-color-primary,#3880ff)}/*!@:host(.button-round)*/.button-round.sc-ion-button-md-h{--border-radius:64px;--padding-top:0;--padding-start:26px;--padding-end:26px;--padding-bottom:0}/*!@:host(.button-large)*/.button-large.sc-ion-button-md-h{--padding-top:0;--padding-start:1em;--padding-end:1em;--padding-bottom:0;height:2.8em;font-size:20px}/*!@:host(.button-small)*/.button-small.sc-ion-button-md-h{--padding-top:0;--padding-start:0.9em;--padding-end:0.9em;--padding-bottom:0;height:2.1em;font-size:13px}/*!@:host(.button-strong)*/.button-strong.sc-ion-button-md-h{font-weight:700}/*!@::slotted(ion-icon[slot=icon-only])*/.sc-ion-button-md-s > ion-icon[slot=icon-only]{padding-left:0;padding-right:0;padding-top:0;padding-bottom:0}@media (any-hover:hover){/*!@:host(.button-solid.ion-color:hover) .button-native*/.button-solid.ion-color.sc-ion-button-md-h:hover .button-native.sc-ion-button-md{background:var(--ion-color-tint)}/*!@:host(.button-clear.ion-color:hover) .button-native,:host(.button-outline.ion-color:hover) .button-native*/.button-clear.ion-color.sc-ion-button-md-h:hover .button-native.sc-ion-button-md, .button-outline.ion-color.sc-ion-button-md-h:hover .button-native.sc-ion-button-md{background:rgba(var(--ion-color-base-rgb),.04)}}
+    </style>
+    <style s-id="sc-ion-title">
+      /*!@:host*/.sc-ion-title-h{--color:initial;display:-ms-flexbox;display:flex;-ms-flex:1;flex:1;-ms-flex-align:center;align-items:center;color:var(--color)}/*!@:host,:host(.title-ios)*/.sc-ion-title-h, .title-ios.sc-ion-title-h{-webkit-transform:translateZ(0);transform:translateZ(0)}/*!@:host(.title-ios)*/.title-ios.sc-ion-title-h{left:0;top:0;padding-left:90px;padding-right:90px;padding-top:0;padding-bottom:0;position:absolute;width:100%;height:100%;font-size:17px;font-weight:600;letter-spacing:-.03em;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;pointer-events:none}/*!@:host-context([dir=rtl]).title-ios,:host-context([dir=rtl]):host(.title-ios)*/[dir=rtl].title-ios.sc-ion-title-h, [dir=rtl] .title-ios.sc-ion-title-h, [dir=rtl].sc-ion-title-h -no-combinator.title-ios.sc-ion-title-h, [dir=rtl] .sc-ion-title-h -no-combinator.title-ios.sc-ion-title-h{left:unset;right:unset;right:0}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@:host(.title-ios)*/.title-ios.sc-ion-title-h{padding-left:unset;padding-right:unset;-webkit-padding-start:90px;padding-inline-start:90px;-webkit-padding-end:90px;padding-inline-end:90px}}/*!@:host(.title-md)*/.title-md.sc-ion-title-h{padding-left:20px;padding-right:20px;padding-top:0;padding-bottom:0;font-size:20px;font-weight:500;letter-spacing:.0125em}@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){/*!@:host(.title-md)*/.title-md.sc-ion-title-h{padding-left:unset;padding-right:unset;-webkit-padding-start:20px;padding-inline-start:20px;-webkit-padding-end:20px;padding-inline-end:20px}}/*!@:host(.ion-color)*/.ion-color.sc-ion-title-h{color:var(--ion-color-base)}/*!@.toolbar-title*/.toolbar-title.sc-ion-title{display:block;width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;pointer-events:auto}
+    </style>
+    <style s-id="sc-ion-ripple-effect">
+      /*!@:host*/.sc-ion-ripple-effect-h{left:0;right:0;top:0;bottom:0;position:absolute;contain:strict;pointer-events:none}/*!@:host(.unbounded)*/.unbounded.sc-ion-ripple-effect-h{contain:layout size style}/*!@.ripple-effect*/.ripple-effect.sc-ion-ripple-effect{border-radius:50%;position:absolute;background-color:currentColor;color:inherit;contain:strict;opacity:0;-webkit-animation:rippleAnimation 225ms forwards,fadeInAnimation 75ms forwards;animation:rippleAnimation 225ms forwards,fadeInAnimation 75ms forwards;will-change:transform,opacity;pointer-events:none}/*!@.fade-out*/.fade-out.sc-ion-ripple-effect{-webkit-transform:translate(var(--translate-end)) scale(var(--final-scale,1));transform:translate(var(--translate-end)) scale(var(--final-scale,1));-webkit-animation:fadeOutAnimation .15s forwards;animation:fadeOutAnimation .15s forwards}@-webkit-keyframes rippleAnimation{0%{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:scale(1);transform:scale(1)}to{-webkit-transform:translate(var(--translate-end)) scale(var(--final-scale,1));transform:translate(var(--translate-end)) scale(var(--final-scale,1))}}@keyframes rippleAnimation{0%{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:scale(1);transform:scale(1)}to{-webkit-transform:translate(var(--translate-end)) scale(var(--final-scale,1));transform:translate(var(--translate-end)) scale(var(--final-scale,1))}}@-webkit-keyframes fadeInAnimation{0%{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.16}}@keyframes fadeInAnimation{0%{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.16}}@-webkit-keyframes fadeOutAnimation{0%{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.16}to{opacity:0}}@keyframes fadeOutAnimation{0%{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.16}to{opacity:0}}
+    </style>
+    <link href="./css/ionic.bundle.css" rel="stylesheet">
+    <script type="module" src="./scripts/ionic.esm.js"></script>
+    <script nomodule src="./scripts/ionic.js"></script>
+  </head>
+  <body>
+    <ion-app class="hydrated ion-page md" s-id="1" s-mode="md">
+      <!--r.1-->
+      <ion-header class="header-md hydrated md" s-id="2" s-mode="md">
+        <!--r.2-->
+        <ion-toolbar class="hydrated md sc-ion-toolbar-md-h" s-id="3" s-mode="md">
+          <!--r.3-->
+          <!--o.0.2.-->
+          <div c-id="3.0.0.0" class="sc-ion-toolbar-md toolbar-background"></div>
+          <div c-id="3.1.0.1" class="sc-ion-toolbar-md sc-ion-toolbar-md-s toolbar-container">
+            <!--s.3.2.1.0.start-->
+            <!--s.3.3.1.1.secondary-->
+            <div c-id="3.4.1.2" class="sc-ion-toolbar-md sc-ion-toolbar-md-s toolbar-content">
+              <!--s.3.5.2.0.-->
+              <ion-title c-id="0.2" class="hydrated md sc-ion-title-h title-md" s-id="4" s-mode="md">
+                <!--r.4-->
+                <!--o.0.4.-->
+                <div c-id="4.0.0.0" class="sc-ion-title sc-ion-title-s toolbar-title">
+                  <!--s.4.1.1.0.-->
+                  <!--t.0.4-->
+                  Button - Basic
+                </div>
+              </ion-title>
+            </div>
+            <!--s.3.6.1.3.primary-->
+            <!--s.3.7.1.4.end-->
+          </div>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="hydrated ion-padding ion-text-center md sc-ion-content-h sc-ion-content-s" id="content" no-bounce="" s-id="5" s-mode="md" style="--offset-top: 0px; --offset-bottom: 0px;">
+        <!--r.5-->
+        <!--o.0.6.-->
+        <!--o.0.8.-->
+        <!--o.0.10.-->
+        <!--o.0.12.-->
+        <!--o.0.14.-->
+        <!--o.0.16.-->
+        <!--o.0.18.-->
+        <!--o.0.20.-->
+        <!--o.0.22.-->
+        <!--o.0.24.-->
+        <!--o.0.26.-->
+        <!--o.0.28.-->
+        <!--o.0.30.-->
+        <!--o.0.32.-->
+        <div c-id="5.0.0.0" class="inner-scroll sc-ion-content sc-ion-content-s scroll-y">
+          <!--s.5.1.1.0.-->
+          <p c-id="0.6">
+            <ion-button class="button button-solid hydrated ion-activatable ion-focusable md sc-ion-button-md-h" s-id="6" s-mode="md">
+              <!--r.6-->
+              <!--o.0.34.-->
+              <button c-id="6.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="6.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.6.2.2.0.icon-only-->
+                  <!--s.6.3.2.1.start-->
+                  <!--s.6.4.2.2.-->
+                  <!--t.0.34-->
+                  Default
+                  <!--s.6.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="6.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="7" s-mode="md">
+                  <!--r.7-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-focusable ion-focused md sc-ion-button-md-h" s-id="8" s-mode="md">
+              <!--r.8-->
+              <!--o.0.35.-->
+              <button c-id="8.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="8.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.8.2.2.0.icon-only-->
+                  <!--s.8.3.2.1.start-->
+                  <!--s.8.4.2.2.-->
+                  <!--t.0.35-->
+                  Default.focused
+                  <!--s.8.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="8.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="9" s-mode="md">
+                  <!--r.9-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-focusable md sc-ion-button-md-h" s-id="10" s-mode="md">
+              <!--r.10-->
+              <!--o.0.36.-->
+              <button c-id="10.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="10.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.10.2.2.0.icon-only-->
+                  <!--s.10.3.2.1.start-->
+                  <!--s.10.4.2.2.-->
+                  <!--t.0.36-->
+                  Default.activated
+                  <!--s.10.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="10.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="11" s-mode="md">
+                  <!--r.11-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.8">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-primary ion-focusable md sc-ion-button-md-h" color="primary" s-id="12" s-mode="md">
+              <!--r.12-->
+              <!--o.0.37.-->
+              <button c-id="12.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="12.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.12.2.2.0.icon-only-->
+                  <!--s.12.3.2.1.start-->
+                  <!--s.12.4.2.2.-->
+                  <!--t.0.37-->
+                  Primary
+                  <!--s.12.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="12.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="13" s-mode="md">
+                  <!--r.13-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-primary ion-focusable ion-focused md sc-ion-button-md-h" color="primary" s-id="14" s-mode="md">
+              <!--r.14-->
+              <!--o.0.38.-->
+              <button c-id="14.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="14.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.14.2.2.0.icon-only-->
+                  <!--s.14.3.2.1.start-->
+                  <!--s.14.4.2.2.-->
+                  <!--t.0.38-->
+                  Primary.focused
+                  <!--s.14.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="14.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="15" s-mode="md">
+                  <!--r.15-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-primary ion-focusable md sc-ion-button-md-h" color="primary" s-id="16" s-mode="md">
+              <!--r.16-->
+              <!--o.0.39.-->
+              <button c-id="16.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="16.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.16.2.2.0.icon-only-->
+                  <!--s.16.3.2.1.start-->
+                  <!--s.16.4.2.2.-->
+                  <!--t.0.39-->
+                  Primary.activated
+                  <!--s.16.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="16.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="17" s-mode="md">
+                  <!--r.17-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.10">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-secondary ion-focusable md sc-ion-button-md-h" color="secondary" s-id="18" s-mode="md">
+              <!--r.18-->
+              <!--o.0.40.-->
+              <button c-id="18.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="18.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.18.2.2.0.icon-only-->
+                  <!--s.18.3.2.1.start-->
+                  <!--s.18.4.2.2.-->
+                  <!--t.0.40-->
+                  Secondary
+                  <!--s.18.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="18.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="19" s-mode="md">
+                  <!--r.19-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-secondary ion-focusable ion-focused md sc-ion-button-md-h" color="secondary" s-id="20" s-mode="md">
+              <!--r.20-->
+              <!--o.0.41.-->
+              <button c-id="20.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="20.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.20.2.2.0.icon-only-->
+                  <!--s.20.3.2.1.start-->
+                  <!--s.20.4.2.2.-->
+                  <!--t.0.41-->
+                  Secondary.focused
+                  <!--s.20.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="20.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="21" s-mode="md">
+                  <!--r.21-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-secondary ion-focusable md sc-ion-button-md-h" color="secondary" s-id="22" s-mode="md">
+              <!--r.22-->
+              <!--o.0.42.-->
+              <button c-id="22.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="22.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.22.2.2.0.icon-only-->
+                  <!--s.22.3.2.1.start-->
+                  <!--s.22.4.2.2.-->
+                  <!--t.0.42-->
+                  Secondary.activated
+                  <!--s.22.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="22.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="23" s-mode="md">
+                  <!--r.23-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.12">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-tertiary ion-focusable md sc-ion-button-md-h" color="tertiary" s-id="24" s-mode="md">
+              <!--r.24-->
+              <!--o.0.43.-->
+              <button c-id="24.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="24.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.24.2.2.0.icon-only-->
+                  <!--s.24.3.2.1.start-->
+                  <!--s.24.4.2.2.-->
+                  <!--t.0.43-->
+                  Tertiary
+                  <!--s.24.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="24.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="25" s-mode="md">
+                  <!--r.25-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-tertiary ion-focusable ion-focused md sc-ion-button-md-h" color="tertiary" s-id="26" s-mode="md">
+              <!--r.26-->
+              <!--o.0.44.-->
+              <button c-id="26.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="26.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.26.2.2.0.icon-only-->
+                  <!--s.26.3.2.1.start-->
+                  <!--s.26.4.2.2.-->
+                  <!--t.0.44-->
+                  Tertiary.focused
+                  <!--s.26.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="26.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="27" s-mode="md">
+                  <!--r.27-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-tertiary ion-focusable md sc-ion-button-md-h" color="tertiary" s-id="28" s-mode="md">
+              <!--r.28-->
+              <!--o.0.45.-->
+              <button c-id="28.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="28.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.28.2.2.0.icon-only-->
+                  <!--s.28.3.2.1.start-->
+                  <!--s.28.4.2.2.-->
+                  <!--t.0.45-->
+                  Tertiary.activated
+                  <!--s.28.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="28.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="29" s-mode="md">
+                  <!--r.29-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.14">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-success ion-focusable md sc-ion-button-md-h" color="success" s-id="30" s-mode="md">
+              <!--r.30-->
+              <!--o.0.46.-->
+              <button c-id="30.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="30.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.30.2.2.0.icon-only-->
+                  <!--s.30.3.2.1.start-->
+                  <!--s.30.4.2.2.-->
+                  <!--t.0.46-->
+                  Success
+                  <!--s.30.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="30.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="31" s-mode="md">
+                  <!--r.31-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-success ion-focusable ion-focused md sc-ion-button-md-h" color="success" s-id="32" s-mode="md">
+              <!--r.32-->
+              <!--o.0.47.-->
+              <button c-id="32.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="32.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.32.2.2.0.icon-only-->
+                  <!--s.32.3.2.1.start-->
+                  <!--s.32.4.2.2.-->
+                  <!--t.0.47-->
+                  Success.focused
+                  <!--s.32.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="32.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="33" s-mode="md">
+                  <!--r.33-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-success ion-focusable md sc-ion-button-md-h" color="success" s-id="34" s-mode="md">
+              <!--r.34-->
+              <!--o.0.48.-->
+              <button c-id="34.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="34.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.34.2.2.0.icon-only-->
+                  <!--s.34.3.2.1.start-->
+                  <!--s.34.4.2.2.-->
+                  <!--t.0.48-->
+                  Success.activated
+                  <!--s.34.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="34.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="35" s-mode="md">
+                  <!--r.35-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.16">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-warning ion-focusable md sc-ion-button-md-h" color="warning" s-id="36" s-mode="md">
+              <!--r.36-->
+              <!--o.0.49.-->
+              <button c-id="36.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="36.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.36.2.2.0.icon-only-->
+                  <!--s.36.3.2.1.start-->
+                  <!--s.36.4.2.2.-->
+                  <!--t.0.49-->
+                  Warning
+                  <!--s.36.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="36.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="37" s-mode="md">
+                  <!--r.37-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-warning ion-focusable ion-focused md sc-ion-button-md-h" color="warning" s-id="38" s-mode="md">
+              <!--r.38-->
+              <!--o.0.50.-->
+              <button c-id="38.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="38.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.38.2.2.0.icon-only-->
+                  <!--s.38.3.2.1.start-->
+                  <!--s.38.4.2.2.-->
+                  <!--t.0.50-->
+                  Warning.focused
+                  <!--s.38.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="38.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="39" s-mode="md">
+                  <!--r.39-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-warning ion-focusable md sc-ion-button-md-h" color="warning" s-id="40" s-mode="md">
+              <!--r.40-->
+              <!--o.0.51.-->
+              <button c-id="40.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="40.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.40.2.2.0.icon-only-->
+                  <!--s.40.3.2.1.start-->
+                  <!--s.40.4.2.2.-->
+                  <!--t.0.51-->
+                  Warning.activated
+                  <!--s.40.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="40.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="41" s-mode="md">
+                  <!--r.41-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.18">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-danger ion-focusable md sc-ion-button-md-h" color="danger" s-id="42" s-mode="md">
+              <!--r.42-->
+              <!--o.0.52.-->
+              <button c-id="42.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="42.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.42.2.2.0.icon-only-->
+                  <!--s.42.3.2.1.start-->
+                  <!--s.42.4.2.2.-->
+                  <!--t.0.52-->
+                  Danger
+                  <!--s.42.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="42.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="43" s-mode="md">
+                  <!--r.43-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-danger ion-focusable ion-focused md sc-ion-button-md-h" color="danger" s-id="44" s-mode="md">
+              <!--r.44-->
+              <!--o.0.53.-->
+              <button c-id="44.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="44.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.44.2.2.0.icon-only-->
+                  <!--s.44.3.2.1.start-->
+                  <!--s.44.4.2.2.-->
+                  <!--t.0.53-->
+                  Danger.focused
+                  <!--s.44.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="44.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="45" s-mode="md">
+                  <!--r.45-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-danger ion-focusable md sc-ion-button-md-h" color="danger" s-id="46" s-mode="md">
+              <!--r.46-->
+              <!--o.0.54.-->
+              <button c-id="46.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="46.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.46.2.2.0.icon-only-->
+                  <!--s.46.3.2.1.start-->
+                  <!--s.46.4.2.2.-->
+                  <!--t.0.54-->
+                  Danger.activated
+                  <!--s.46.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="46.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="47" s-mode="md">
+                  <!--r.47-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.20">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-light ion-focusable md sc-ion-button-md-h" color="light" s-id="48" s-mode="md">
+              <!--r.48-->
+              <!--o.0.55.-->
+              <button c-id="48.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="48.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.48.2.2.0.icon-only-->
+                  <!--s.48.3.2.1.start-->
+                  <!--s.48.4.2.2.-->
+                  <!--t.0.55-->
+                  Light
+                  <!--s.48.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="48.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="49" s-mode="md">
+                  <!--r.49-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-light ion-focusable ion-focused md sc-ion-button-md-h" color="light" s-id="50" s-mode="md">
+              <!--r.50-->
+              <!--o.0.56.-->
+              <button c-id="50.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="50.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.50.2.2.0.icon-only-->
+                  <!--s.50.3.2.1.start-->
+                  <!--s.50.4.2.2.-->
+                  <!--t.0.56-->
+                  Light.focused
+                  <!--s.50.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="50.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="51" s-mode="md">
+                  <!--r.51-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-light ion-focusable md sc-ion-button-md-h" color="light" s-id="52" s-mode="md">
+              <!--r.52-->
+              <!--o.0.57.-->
+              <button c-id="52.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="52.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.52.2.2.0.icon-only-->
+                  <!--s.52.3.2.1.start-->
+                  <!--s.52.4.2.2.-->
+                  <!--t.0.57-->
+                  Light.activated
+                  <!--s.52.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="52.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="53" s-mode="md">
+                  <!--r.53-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.22">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-medium ion-focusable md sc-ion-button-md-h" color="medium" s-id="54" s-mode="md">
+              <!--r.54-->
+              <!--o.0.58.-->
+              <button c-id="54.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="54.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.54.2.2.0.icon-only-->
+                  <!--s.54.3.2.1.start-->
+                  <!--s.54.4.2.2.-->
+                  <!--t.0.58-->
+                  Medium
+                  <!--s.54.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="54.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="55" s-mode="md">
+                  <!--r.55-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-medium ion-focusable ion-focused md sc-ion-button-md-h" color="medium" s-id="56" s-mode="md">
+              <!--r.56-->
+              <!--o.0.59.-->
+              <button c-id="56.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="56.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.56.2.2.0.icon-only-->
+                  <!--s.56.3.2.1.start-->
+                  <!--s.56.4.2.2.-->
+                  <!--t.0.59-->
+                  Medium.focused
+                  <!--s.56.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="56.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="57" s-mode="md">
+                  <!--r.57-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-medium ion-focusable md sc-ion-button-md-h" color="medium" s-id="58" s-mode="md">
+              <!--r.58-->
+              <!--o.0.60.-->
+              <button c-id="58.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="58.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.58.2.2.0.icon-only-->
+                  <!--s.58.3.2.1.start-->
+                  <!--s.58.4.2.2.-->
+                  <!--t.0.60-->
+                  Medium.activated
+                  <!--s.58.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="58.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="59" s-mode="md">
+                  <!--r.59-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.24">
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-dark ion-focusable md sc-ion-button-md-h" color="dark" s-id="60" s-mode="md">
+              <!--r.60-->
+              <!--o.0.61.-->
+              <button c-id="60.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="60.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.60.2.2.0.icon-only-->
+                  <!--s.60.3.2.1.start-->
+                  <!--s.60.4.2.2.-->
+                  <!--t.0.61-->
+                  Dark
+                  <!--s.60.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="60.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="61" s-mode="md">
+                  <!--r.61-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-solid hydrated ion-activatable ion-color ion-color-dark ion-focusable ion-focused md sc-ion-button-md-h" color="dark" s-id="62" s-mode="md">
+              <!--r.62-->
+              <!--o.0.62.-->
+              <button c-id="62.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="62.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.62.2.2.0.icon-only-->
+                  <!--s.62.3.2.1.start-->
+                  <!--s.62.4.2.2.-->
+                  <!--t.0.62-->
+                  Dark.focused
+                  <!--s.62.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="62.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="63" s-mode="md">
+                  <!--r.63-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="activated button button-solid hydrated ion-activatable ion-color ion-color-dark ion-focusable md sc-ion-button-md-h" color="dark" s-id="64" s-mode="md">
+              <!--r.64-->
+              <!--o.0.63.-->
+              <button c-id="64.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="64.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.64.2.2.0.icon-only-->
+                  <!--s.64.3.2.1.start-->
+                  <!--s.64.4.2.2.-->
+                  <!--t.0.63-->
+                  Dark.activated
+                  <!--s.64.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="64.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="65" s-mode="md">
+                  <!--r.65-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.26">
+            <ion-button class="button button-solid hydrated ion-activatable ion-focusable md sc-ion-button-md-h" s-id="66" s-mode="md" style="--opacity: .2;">
+              <!--r.66-->
+              <!--o.0.64.-->
+              <button c-id="66.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="66.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.66.2.2.0.icon-only-->
+                  <!--s.66.3.2.1.start-->
+                  <!--s.66.4.2.2.-->
+                  <!--t.0.64-->
+                  Opacity: 0.2
+                  <!--s.66.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="66.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="67" s-mode="md">
+                  <!--r.67-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.28">
+            <ion-button aria-disabled="true" class="button button-block button-disabled button-solid hydrated ion-activatable ion-focusable md sc-ion-button-md-h" disabled="" expand="block" id="disabledButton" onclick="clickedButton(event)" s-id="68" s-mode="md">
+              <!--r.68-->
+              <!--o.0.65.-->
+              <button c-id="68.0.0.0" class="button-native sc-ion-button-md" disabled="" type="button">
+                <span c-id="68.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.68.2.2.0.icon-only-->
+                  <!--s.68.3.2.1.start-->
+                  <!--s.68.4.2.2.-->
+                  <!--t.0.65-->
+                  Button Disabled
+                  <!--s.68.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="68.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="69" s-mode="md">
+                  <!--r.69-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button aria-disabled="true" class="button button-block button-disabled button-solid hydrated ion-activatable ion-color ion-color-secondary ion-focusable md sc-ion-button-md-h" color="secondary" disabled="" expand="block" s-id="70" s-mode="md">
+              <!--r.70-->
+              <!--o.0.66.-->
+              <button c-id="70.0.0.0" class="button-native sc-ion-button-md" disabled="" type="button">
+                <span c-id="70.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.70.2.2.0.icon-only-->
+                  <!--s.70.3.2.1.start-->
+                  <!--s.70.4.2.2.-->
+                  <!--t.0.66-->
+                  Secondary Disabled
+                  <!--s.70.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="70.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="71" s-mode="md">
+                  <!--r.71-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button aria-disabled="true" class="button button-block button-disabled button-solid hydrated ion-activatable ion-color ion-color-tertiary ion-focusable md sc-ion-button-md-h" color="tertiary" disabled="" expand="block" s-id="72" s-mode="md" style="--opacity: 1;">
+              <!--r.72-->
+              <!--o.0.67.-->
+              <button c-id="72.0.0.0" class="button-native sc-ion-button-md" disabled="" type="button">
+                <span c-id="72.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.72.2.2.0.icon-only-->
+                  <!--s.72.3.2.1.start-->
+                  <!--s.72.4.2.2.-->
+                  <!--t.0.67-->
+                  Disabled opacity: 1
+                  <!--s.72.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="72.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="73" s-mode="md">
+                  <!--r.73-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.30">
+            <ion-button class="button button-block button-solid hydrated ion-activatable ion-focusable md sc-ion-button-md-h" expand="block" onclick="toggleDisabled()" s-id="74" s-mode="md">
+              <!--r.74-->
+              <!--o.0.68.-->
+              <button c-id="74.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="74.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.74.2.2.0.icon-only-->
+                  <!--s.74.3.2.1.start-->
+                  <!--s.74.4.2.2.-->
+                  <!--t.0.68-->
+                  Toggle Disabled
+                  <!--s.74.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="74.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="75" s-mode="md">
+                  <!--r.75-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+          <p c-id="0.32">
+            <ion-button class="button button-solid hydrated ion-activatable ion-focusable md sc-ion-button-md-h" id="dynamicColor1" onclick="changeColor(event)" s-id="76" s-mode="md">
+              <!--r.76-->
+              <!--o.0.69.-->
+              <button c-id="76.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="76.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.76.2.2.0.icon-only-->
+                  <!--s.76.3.2.1.start-->
+                  <!--s.76.4.2.2.-->
+                  <!--t.0.69-->
+                  Change Color
+                  <!--s.76.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="76.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="77" s-mode="md">
+                  <!--r.77-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+            <ion-button class="button button-outline hydrated ion-activatable ion-focusable md sc-ion-button-md-h" fill="outline" id="dynamicColor2" onclick="changeColor(event)" s-id="78" s-mode="md">
+              <!--r.78-->
+              <!--o.0.70.-->
+              <button c-id="78.0.0.0" class="button-native sc-ion-button-md" type="button">
+                <span c-id="78.1.1.0" class="button-inner sc-ion-button-md sc-ion-button-md-s">
+                  <!--s.78.2.2.0.icon-only-->
+                  <!--s.78.3.2.1.start-->
+                  <!--s.78.4.2.2.-->
+                  <!--t.0.70-->
+                  Change Color
+                  <!--s.78.5.2.3.end-->
+                </span>
+                <ion-ripple-effect c-id="78.6.1.1" class="hydrated md sc-ion-button-md sc-ion-ripple-effect-h" role="presentation" s-id="79" s-mode="md">
+                  <!--r.79-->
+                </ion-ripple-effect>
+              </button>
+            </ion-button>
+          </p>
+        </div>
+        <!--s.5.2.0.1.fixed-->
+      </ion-content>
+    </ion-app>
+    <script>
+
+    testingColors = ['primary', 'secondary', 'danger', 'dark'];
+    testingColorIndex = {
+      dynamicColor1: 0,
+      dynamicColor2: 0
+    };
+
+    function changeColor(ev) {
+      el = ev.currentTarget;
+
+      testingColorIndex[el.id] = (testingColorIndex[el.id] >= testingColors.length - 1 ? 0 : testingColorIndex[el.id] + 1);
+      newColor = testingColors[testingColorIndex[el.id]];
+
+      el.color = newColor;
+    }
+
+    function toggleDisabled() {
+      var buttonEl = document.getElementById('disabledButton');
+      console.log(buttonEl);
+      buttonEl.disabled = !buttonEl.disabled;
+    }
+
+    function clickedButton(ev) {
+      console.log("Clicked button", ev);
+    }
+
+    </script>
+  </body>
+</html>
