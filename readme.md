@@ -10,6 +10,7 @@ Just a quick demo for tracing purposes.
 
 - ion-button also uses animations, gestures and other shared utilities.
 - Utilities are dynamically imported and should not apart of the critcal path.
+- WORK IN PROGRESS!
 
 
 [adamdbradley](https://twitter.com/adamdbradley)
